@@ -162,10 +162,10 @@ class ThreeVector():
 		print "(%s, %s, %s)" %(self.x, self.y, self.z)
 
 class FourMomentum():
-	ID = 0
+	#ID = 0
 	def __init__(self, restMass, onShell=True):
-		Particle.ID += 1
-		self.ID = Particle.ID
+		#Particle.ID += 1
+		#self.ID = Particle.ID
 		self.restMass = restMass
 		self.onShell = onShell
 		self.threeMomentum = ThreeVector(0,0,0)

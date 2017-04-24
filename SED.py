@@ -329,7 +329,6 @@ class ScalarElectron(Particle):
 		self.particleType = ScalarElectron
 		self.antiParticleType = ScalarPositron
 		self.particleType.i += 1
-		self.ID = self.particleType.i
 		self.model = SED
 		Particle.__init__(self, 0, -1, couplesWith, onShell=onShell, name="Electron"+str(self.particleType.i))	
 	
@@ -342,7 +341,6 @@ class ScalarPositron(Particle):
 		self.particleType = ScalarPositron
 		self.antiParticleType = ScalarElectron
 		self.particleType.i += 1
-		self.ID = self.particleType.i
 		self.model = SED
 		Particle.__init__(self, 0, 1, couplesWith, onShell=onShell, name="Positron"+str(self.particleType.i))	
 		
@@ -353,7 +351,6 @@ class ScalarMuon(Particle):
 		self.particleType = ScalarMuon
 		self.antiParticleType = ScalarAntiMuon
 		self.particleType.i += 1
-		self.ID = self.particleType.i
 		self.model = SED
 		Particle.__init__(self, 0, -1, couplesWith, onShell=onShell, name="Muon"+str(self.particleType.i))	
 		
@@ -365,7 +362,6 @@ class ScalarAntiMuon(Particle):
 		self.particleType = ScalarAntiMuon
 		self.antiParticleType = ScalarMuon
 		self.particleType.i += 1
-		self.ID = self.particleType.i
 		self.model = SED
 		Particle.__init__(self, 0, 1, couplesWith, onShell=onShell, name="Anti-Muon"+str(self.particleType.i))	
 
@@ -376,7 +372,6 @@ class Photon(Particle):
 		self.particleType = Photon
 		self.antiParticleType = Photon
 		self.particleType.i += 1
-		self.ID = self.particleType.i
 		self.model = SED
 		Particle.__init__(self, 0, 0, couplesWith, onShell=onShell, name="Photon"+str(self.particleType.i))	
 		self.polarisations = None

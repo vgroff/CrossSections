@@ -13,28 +13,6 @@ import SED
 VERTEX_ID = 0
 PRINT = False
 PRINT_ALL = False
-
-# Holds multiple lines
-class Vertex():
-	def __init__(self):
-		self.neighbours = []
-		global VERTEX_ID
-		VERTEX_ID += 1
-		self.vertexID = VERTEX_ID
-	def __str__(self):
-		return "Vertex%s" %self.vertexID
-	def __repr__(self):
-		return self.__str__()
-	def addLine(self, line, neighbour=None):
-		if len(self.neighbours) < 3:
-			if neighbour == None:
-				self.neighbours.append([neighbour, line])
-				return
-			elif len(neighbour.neighbours) < 3:
-				self.neighbours.append([neighbour, line])
-				neighbour.neighbours.append([self, line.getReversed()])
-				return
-		print "ERR: Too many lines at one vertex!!!"
 				
 				
 # Holds particle and it's direction		
